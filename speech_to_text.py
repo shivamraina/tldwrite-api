@@ -74,6 +74,6 @@ def automatic_speech_recognition(fileId):
         print("Successful")
         shutil.rmtree(folder_name)
         return whole_text
-    except:
-        print("Error Occurred")
+    except Exception as e:
+        print(e)
         return "Error Occurred"
