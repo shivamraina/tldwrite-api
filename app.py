@@ -10,7 +10,7 @@ def homepage():
 @app.route("/speechtotext/<fileId>", methods=['GET'])
 def speechToText(fileId):
     speechTranscript = automatic_speech_recognition(fileId)
-    return jsonify("Helllo")
+    return jsonify(speechTranscript)
 
 if __name__ == "__main__":
     app.run()
