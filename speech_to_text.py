@@ -11,7 +11,7 @@ import gridfs
 
 def read_data(fileId):
     # Estabhlish mongoDB connection
-    mongoURI = "mongodb+srv://shivam:Avengers123@mycluster.eafse.mongodb.net/TLDWrite?retryWrites=true&w=majority"
+    mongoURI = f"mongodb+srv://shivam:{os.environ.get('DB_KEY')}@mycluster.eafse.mongodb.net/TLDWrite?retryWrites=true&w=majority"
 
     client = MongoClient(mongoURI)
     fs = gridfs.GridFS(client['TLDWrite'], "uploads")
