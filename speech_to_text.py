@@ -71,9 +71,9 @@ def automatic_speech_recognition(fileId):
                     text = f"{text.capitalize()}. "
                     whole_text += text
 
-        print("Successful")
+        print("Successful ASR")
         shutil.rmtree(folder_name)
         return whole_text
     except Exception as e:
         print(e)
-        return "Error Occurred"
+        return "Error Occurred in ASR"
