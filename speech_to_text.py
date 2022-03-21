@@ -22,7 +22,7 @@ def read_data(fileId):
     
 def automatic_speech_recognition(fileId):
     try:
-
+        print("HIIIIIIIIIIIIIIIII")
         data = read_data(fileId)
         
         dir_path = os.path.dirname(os.path.realpath(__file__))
